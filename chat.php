@@ -30,7 +30,7 @@ IM_Entry(
             'authentication' => array(
                 'all' => array( // load, update, new, delete
                     'target' => 'field-user',
-                    'field' => 'user',
+                    'field' => 'username',
                 ),
             ),
             'post-reconstruct' => true,
