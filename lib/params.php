@@ -82,7 +82,7 @@ $dbOption = array();
  * For putting the sensitive information to outside of repository, Profile is one of the solutions.
  * You can specify the path to arbitrary place to store the profile file.
  */
-$profileRoot = "/var/www";
+//$profileRoot = "/var/www";
 
 /* Please change the value of $webServerName. FQDN or domain name of your web server for protecting CSRF
  * Example:
@@ -198,6 +198,7 @@ $oAuth = [
         'ClientID' => 'Profile|IM|MyNumberCard-Sandbox|ClientID',
         'Scope' => 'openid name address birthdate gender',
         'RedirectURL' => 'https://demo.inter-mediator.com/IMTesting_MyNumberCard/OAuthCatcher.php',
+        'KeyFilePath' => '/var/www/mynumber-privatekey.pem'
     ],
 ];
 
