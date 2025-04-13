@@ -82,7 +82,7 @@ $dbOption = array();
  * For putting the sensitive information to outside of repository, Profile is one of the solutions.
  * You can specify the path to arbitrary place to store the profile file.
  */
-//$profileRoot = "path to profile's root directory.";
+$profileRoot = "/var/www";
 
 /* Please change the value of $webServerName. FQDN or domain name of your web server for protecting CSRF
  * Example:
