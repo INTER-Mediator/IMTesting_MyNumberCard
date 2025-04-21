@@ -6,14 +6,14 @@
  *
  * INTER-Mediator is supplied under MIT License.
  * Please see the full license for details:
- * https://github.com/msyk/inter-mediator/blob/master/dist-docs/License.txt
+ * https://github.com/inter-mediator/inter-mediator/blob/master/dist-docs/License.txt
  *
  * @copyright     Copyright (c) INTER-Mediator Directive Committee (http://inter-mediator.org)
  * @link          https://inter-mediator.com/
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-require_once('vendor/msyk/inter-mediator/INTER-Mediator.php');
+require_once('vendor/inter-mediator/inter-mediator/INTER-Mediator.php');
 
 IM_Entry(
     array(

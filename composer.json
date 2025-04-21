@@ -2,17 +2,11 @@
   "name": "inter-mediator/imtesting_oauth",
   "version": "1",
   "time": "2025-03-30",
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/msyk/INTER-Mediator.git"
-    }
-  ],
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
     "php": ">=8.1.0",
-    "msyk/inter-mediator": "*"
+    "inter-mediator/inter-mediator": "dev-master"
   },
   "autoload": {},
   "description": "INTER-Mediator Testing Application for OAuth2 Authentication features.",
@@ -46,13 +40,13 @@
       "rm -rf node_modules vendor"
     ],
     "post-update-cmd": [
-      "cd ./vendor/msyk/inter-mediator; npm install",
-      "cd ./vendor/msyk/inter-mediator; npm update",
-      "cd ./vendor/msyk/inter-mediator/dist-docs; ./generateminifyjshere.sh"
+      "cd ./vendor/inter-mediator/inter-mediator; npm install",
+      "cd ./vendor/inter-mediator/inter-mediator; npm update",
+      "cd ./vendor/inter-mediator/inter-mediator/dist-docs; ./generateminifyjshere.sh"
     ],
     "post-install-cmd": [
-      "cd ./vendor/msyk/inter-mediator; npm install",
-      "cd ./vendor/msyk/inter-mediator/dist-docs; ./generateminifyjshere.sh"
+      "cd ./vendor/inter-mediator/inter-mediator; npm install",
+      "cd ./vendor/inter-mediator/inter-mediator/dist-docs; ./generateminifyjshere.sh"
     ]
   },
   "config": {
