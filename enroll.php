@@ -16,19 +16,18 @@
 require_once('vendor/inter-mediator/inter-mediator/INTER-Mediator.php');
 
 IM_Entry(
-    array(
-        array(
-            'records' => 1,
-            'name' => 'authuser',
-            'key' => 'id',
-        ),
-    ),
-    array(
-        'authentication' => array( // table only, for all operations
+    [
+        [
+            'name' => 'authuser', 'key' => 'id','records' => 1,
+            'authentication' => ['all' => ['target' => 'field-user', 'field' => 'username',],],
+        ],
+    ],
+    [
+        'authentication' => [
             'authexpired' => '3600', // Set as seconds.
             'storing' => 'credential', // session-storage, 'cookie'(default), 'cookie-domainwide', 'none'
-        ),
-    ),
-    array('db-class' => 'PDO'),
+        ],
+    ],
+    ['db-class' => 'PDO'],
     2
 );
