@@ -21,6 +21,7 @@ $pathToIM = "./vendor/inter-mediator/inter-mediator";   // Modify this to match 
 //---------------------------------------------
 
 require_once("{$pathToIM}/INTER-Mediator.php"); // Loading INTER-Mediator and relevant libraries.
+use INTERMediator\Auth\OAuthAuth;
 
 $authObj = new OAuthAuth($_GET["state"]);
 //$authObj->debugMode = true; // or comment here
