@@ -1,11 +1,30 @@
 <html>
-<head></head>
+<head>
+    <title>IMマイナンバーカード認証テスト</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+    <script type="text/javascript" src="enroll.php"></script>
+    <script type="text/javascript" src="enroll.js"></script>
+</head>
 <body>
 <h1>IMマイナンバーカード認証テスト</h1>
-<h2>マイナンバーカードで認証を行うアプリケーションです。実装のテスト用に開発・運用しています。</h2>
+<p>マイナンバーカードで認証を行うアプリケーションです。実装のテスト用に開発・運用しています。</p>
+<h2>認証チャットアプリケーション</h2>
+<p>マイナンバーカードでの認証により、新たなユーザを作成する、標準的な認証アプリケーションです。</p>
 <ul>
     <li><a href="chat1.html">chat.html (user privilege)</a></li>
     <li><a href="chat2.html">chat2.html (no privilege)</a></li>
 </ul>
+<h2>ユーザ登録アプリケーション</h2>
+<p>
+    マイナンバーカードを本人確認のために利用し、確認できればユーザ登録を行います。
+    その時、通常のユーザを作成し、ユーザ名とパスワードをページ上で知らせます。
+    そして、このページに戻り、「認証登録結果の確認」ボタンで発行されたユーザが有効であることを確認します。
+    本人確認を行なった結果ユーザ登録済みのマイナンバーカードであれば、ユーザ名のみを表示します。
+</p>
+<ul>
+    <li><button id="_im_oauthbutton_mynumbercard" onclick="confirming()">マイナンバーカードで本人確認</button></li>
+    <li><a href="enroll.html">認証登録結果の確認</a></li>
+</ul>
+
 </body>
 </html>

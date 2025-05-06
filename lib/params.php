@@ -200,6 +200,14 @@ $oAuth = [
         'RedirectURL' => 'https://demo.inter-mediator.com/IMTesting_MyNumberCard/OAuthCatcher.php',
         'KeyFilePath' => '/var/www/mynumber-privatekey.pem'
     ],
+    'MyNumberCard-Sandbox' => [
+        'AuthButton' => 'マイナンバーカードで本人確認',
+        'ClientID' => 'Profile|IM|MyNumberCard-Sandbox|ClientID',
+        'Scope' => 'openid name address birthdate gender',
+        'RedirectURL' => 'https://demo.inter-mediator.com/IMTesting_MyNumberCard/OAuthCatcher.php',
+        'KeyFilePath' => '/var/www/mynumber-privatekey.pem',
+        'Behavior' => 'no-show-on-login-panel',
+    ],
 ];
 
 /* SAML Support
