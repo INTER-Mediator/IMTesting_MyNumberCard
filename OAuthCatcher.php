@@ -35,7 +35,8 @@ if (!$authObj->isActive) {
     exit;
 }
 $err = "No Error";
-if ($authObj->afterAuth()) {
+if ($authObj->afterAuth()) { // Checking whether the authentication is successful.
+    $authObj->userInfoToLogin(); // Set up user and automatic login.
     $jsCode = $authObj->javaScriptCode();
     if ($authObj->debugMode) {
         $err = $authObj->errorMessages();
