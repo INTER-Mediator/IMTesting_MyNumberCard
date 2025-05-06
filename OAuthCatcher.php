@@ -22,16 +22,18 @@ $pathToIM = "./vendor/inter-mediator/inter-mediator";   // Modify this to match 
 
 require_once("{$pathToIM}/INTER-Mediator.php"); // Loading INTER-Mediator and relevant libraries.
 
-$authObj = new \INTERMediator\Auth\OAuthAuth($_COOKIE["_im_oauth_provider"] ?? "");
-$authObj->debugMode = false; // or comment here
-$authObj->setDoRedirect(true);
+$authObj = new OAuthAuth($_GET["state"]);
+//$authObj->debugMode = true; // or comment here
+//$authObj->setDoRedirect(true);
 if (is_null($authObj)) {
     echo "Couldn't authenticate with parameters you supplied.";
     exit;
 }
 $jsCode = "";
 if (!$authObj->isActive) {
-    echo "Missing parameters for OAuth authentication." . ($_GET['error_description'] ?? "");
+    echo "Missing parameters for OAuth authentication. "
+        . ($_GET['error_description'] ?? "")
+        . $authObj->errorMessages();
     exit;
 }
 $err = "No Error";
