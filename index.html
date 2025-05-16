@@ -2,6 +2,12 @@
 <head>
     <title>IMマイナンバーカード認証テスト</title>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+    <script src="enroll.php"></script>
+    <script>
+      INTERMediatorOnPage.doBeforeConstruct = function () {
+        INTERMediatorLog.suppressDebugMessageOnPage = true
+      }
+    </script>
 </head>
 <body>
 <h1>IMマイナンバーカード認証テスト</h1>
