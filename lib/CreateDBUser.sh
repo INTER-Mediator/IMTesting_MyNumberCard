@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # CreateDBUser.sh
 # Parameter: If no parameter, it uses in home of the user.
