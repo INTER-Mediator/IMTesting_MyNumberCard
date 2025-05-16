@@ -4,6 +4,16 @@ function confirming(){
 
 INTERMediatorOnPage.doBeforeConstruct = function () {
   INTERMediatorLog.suppressDebugMessageOnPage = true;
+  const params = INTERMediatorOnPage.getURLParametersAsArray()
+  let nodes;
+  if(params['mode'] && params['mode'] == 'new'){
+    nodes = document.querySelectorAll(".updatemsg")
+  } else if (params['mode'] && params['mode'] == 'update') {
+    nodes = document.querySelectorAll(".newmsg")
+  }
+  nodes.map((node) => {
+    node.style.display = "none"
+  })
 }
 
 INTERMediatorOnPage.doAfterConstruct = function () {

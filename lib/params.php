@@ -18,26 +18,12 @@
 $dbClass = 'PDO';
 
 // Common settings for FileMaker_FX and PDO:
-$dbUser = 'web';
-$dbPassword = 'password';
-//$dbPassword = 'Profile|IM|test_db|db_password';
-/*
-For using profile to hide the password, the file '~/.im/credentials' has the contents like this:
------------------------
-[test_db]
-db_password = password
-*/
-
-// FileMaker_FX/DataAPI are aware of below:
-$dbServer = '10.211.56.2'; //'127.0.0.1'; //
-$dbPort = '80';
-//$dbDataType = 'FMPro12';
-$dbDatabase = 'TestDB';
-$dbProtocol = 'HTTP';
-$certVerifying = false;
+$dbUser = 'mynumber_admin';
+$dbPassword = 'joh8AeK8$iezo6Hou#Aez5eQu2';
+$dbPassword = 'Profile|IM|MyNumberCard-Sandbox|DBPassword';
 
 // PDO is aware of below:
-$dbDSN = 'mysql:host=127.0.0.1;dbname=test_db;charset=utf8mb4';
+$dbDSN = 'mysql:host=127.0.0.1;dbname=mynumber_db;charset=utf8mb4';
 $dbOption = array();
 
 /* Schema Automatic Generating
@@ -198,7 +184,15 @@ $oAuth = [
         'ClientID' => 'Profile|IM|MyNumberCard-Sandbox|ClientID',
         'Scope' => 'openid name address birthdate gender',
         'RedirectURL' => 'https://demo.inter-mediator.com/IMTesting_MyNumberCard/OAuthCatcher.php',
-        'KeyFilePath' => '/var/www/mynumber-privatekey.pem'
+        'KeyFilePath' => '/var/www/mynumber-privatekey.pem',
+    ],
+    'MyNumberCard-Sandbox_Confirm' => [
+        'AuthButton' => 'マイナンバーカードで認証',
+        'ClientID' => 'Profile|IM|MyNumberCard-Sandbox|ClientID',
+        'Scope' => 'openid name address birthdate gender',
+        'RedirectURL' => 'https://demo.inter-mediator.com/IMTesting_MyNumberCard/OAuthCatcher_alt.php',
+        'KeyFilePath' => '/var/www/mynumber-privatekey.pem',
+        'Behavior' => 'no-show-on-login-panel',
     ],
 ];
 

@@ -18,9 +18,10 @@ require_once('vendor/inter-mediator/inter-mediator/INTER-Mediator.php');
 IM_Entry(
     array(
         array(
-            'records' => 100000000,
+            'records' => 10,
             'name' => 'chat',
             'key' => 'id',
+            'paging' => true,
             'sort' => array(
                 array('field' => 'postdt', 'direction' => 'desc'),
             ),
@@ -36,11 +37,12 @@ IM_Entry(
             'post-reconstruct' => true,
         ),
         array(
-            'records' => 100000000,
+            'records' => 10,
             'name' => 'chat2',
             'view' => 'chat',
             'table' => 'chat',
             'key' => 'id',
+            'paging' => true,
             'sort' => array(
                 array('field' => 'postdt', 'direction' => 'desc'),
             ),

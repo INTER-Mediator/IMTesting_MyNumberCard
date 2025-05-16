@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+/*
+ * INTER-Mediator
+ * Copyright (c) INTER-Mediator Directive Committee (http://inter-mediator.org)
+ * This project started at the end of 2009 by Masayuki Nii msyk@msyk.net.
+ *
+ * INTER-Mediator is supplied under MIT License.
+ * Please see the full license for details:
+ * https://github.com/INTER-Mediator/INTER-Mediator/blob/master/dist-docs/License.txt
+ */  -->
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <title>INTER-Mediator - Account</title>
+    <script src="accountmanager.php"></script>
+    <script src="accountmanager.js"></script>
+</head>
+<body>
+<h1 style="font-weight:bold;color:blueviolet">Account Management System</h1>
+New Password: <input id="inputpassword" type="text">
+Set the new password and click "Set" button on each user.
+<div id="IM_NAVIGATOR">Navigation Controls by INTER-Mediator</div>
+<h2>User Accounts</h2>
+<table>
+    <thead>
+    <tr>
+        <th>User Name</th>
+        <th>Hashed Password</th>
+        <th>Email</th>
+        <th>Real Name</th>
+        <th>sub</th>
+        <th>Address</th>
+        <th>Birthdate</th>
+        <th>Gender</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            <input data-im="authuser@username" type="text">
+        </td>
+        <td>
+            <input data-im="authuser@hashedpasswd" type="text" size="5">
+            <button onclick="setPassword($)" data-im="authuser@id@$onclick">Set</button>
+        </td>
+        <td>
+            <input data-im="authuser@email" type="text">
+        </td>
+        <td>
+            <span data-im="authuser@realname"></span>
+        </td>
+        <td>
+            <span data-im="authuser@sub"></span>
+        </td>
+        <td>
+            <span data-im="authuser@address"></span>
+        </td>
+        <td>
+            <span data-im="authuser@birthdate"></span>
+        </td>
+        <td>
+            <span data-im="authuser@gender"></span>
+        </td>
+        <!--<td><span data-im="authuser@belonging"></span></td>-->
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

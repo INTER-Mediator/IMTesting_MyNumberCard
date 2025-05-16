@@ -19,14 +19,15 @@
 <body>
 <div id="wrapper">
     <h1>Simple but Authorized Chat</h1>
-    <div><a href="index.html">← Top Page</a></div>
-    <div data-im-control="enclosure post">
+    <span><a href="index.html"><button>← Top Page</button></a></span>
+    <span data-im-control="enclosure post">
         <span data-im-control="repeater">
-            <input type="text" data-im="chat2@message">
+            <input type="text" data-im="chat@message">
             <button data-im-control="post">Post</button>
         </span>
         <button onclick="javascript:INTERMediatorOnPage.logout()">Logout</button>
-    </div>
+    </span>
+    <div id="IM_NAVIGATOR">Navigation Controls by INTER-Mediator</div>
     <table>
         <thead>
         <tr>
