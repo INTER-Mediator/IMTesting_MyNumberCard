@@ -11,9 +11,11 @@ INTERMediatorOnPage.doBeforeConstruct = function () {
   } else if (params['mode'] && params['mode'] == 'update') {
     nodes = document.querySelectorAll(".newmsg")
   }
-  nodes.map((node) => {
-    node.style.display = "none"
-  })
+  if(nodes) {
+    nodes.map((node) => {
+      node.style.display = "none"
+    })
+  }
 }
 
 INTERMediatorOnPage.doAfterConstruct = function () {
