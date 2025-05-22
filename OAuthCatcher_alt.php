@@ -73,7 +73,7 @@ if ($authObj->afterAuth()) { // Checking whether the authentication is successfu
         $err = $authObj->errorMessages();
     }
     $param = $authObj->isCreate() ? "new" : "update";
-    $jsCode = "location.href = '/enroll.html?mode={$param}';";
+    $jsCode = "location.href = 'enroll.html?mode={$param}';";
 } else {
     $err = $authObj->errorMessages();
 }
