@@ -12,7 +12,7 @@ INTERMediatorOnPage.doBeforeConstruct = function () {
     nodes = document.querySelectorAll(".newmsg")
   }
   if(nodes) {
-    nodes.map((node) => {
+    [...nodes].map((node) => {
       node.style.display = "none"
     })
   }
