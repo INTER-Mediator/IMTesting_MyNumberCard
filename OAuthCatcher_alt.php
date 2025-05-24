@@ -19,6 +19,7 @@ date_default_timezone_set('Asia/Tokyo');
 $pathToIM = "./vendor/inter-mediator/inter-mediator";   // Modify this to match your directories.
 require_once("{$pathToIM}/INTER-Mediator.php"); // Loading INTER-Mediator and relevant libraries.
 use INTERMediator\Auth\OAuthAuth;
+use INTERMediator\DB\Logger;
 use INTERMediator\DB\Proxy_ExtSupport;
 use INTERMediator\IMUtil;
 
@@ -56,7 +57,7 @@ $authObj->setDoRedirect(false);
 if (!$authObj->isActive) {
     echo "Missing parameters for OAuth authentication. "
         . ($_GET['error_description'] ?? "")
-        . $authObj->errorMessages();
+        . $authObj->errorMessages() . var_export(Logger::getInstance()->getDebugMessages(),true);
     exit;
 }
 $err = "No Error";
