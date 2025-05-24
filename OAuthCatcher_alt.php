@@ -90,6 +90,8 @@ Provider: <?php echo $authObj->oAuthProvider(); ?><br>
 Status: <?php echo $err; ?>
 <hr/>
 <p>This page must be redirected to another page.</p>
+<hr>
+<?php echo var_export(Logger::getInstance()->getDebugMessages(),true); ?>
 </body>
 </html>
 
