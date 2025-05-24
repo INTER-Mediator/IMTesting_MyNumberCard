@@ -57,7 +57,7 @@ $authObj->setDoRedirect(false);
 if (!$authObj->isActive) {
     echo "Missing parameters for OAuth authentication. "
         . ($_GET['error_description'] ?? "")
-        . $authObj->errorMessages() . var_export(Logger::getInstance()->getDebugMessages(),true);
+        . $authObj->errorMessages();
     exit;
 }
 $err = "No Error";
@@ -74,7 +74,7 @@ if ($authObj->afterAuth()) { // Checking whether the authentication is successfu
         $err = $authObj->errorMessages();
     }
     $param = $authObj->isCreate() ? "new" : "update";
-//    $jsCode = "location.href = 'enroll.html?mode={$param}';";
+    $jsCode = "location.href = 'enroll.html?mode={$param}';";
 } else {
     $err = $authObj->errorMessages();
 }
